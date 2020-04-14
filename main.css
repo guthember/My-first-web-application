@@ -21,19 +21,44 @@ h1 {
   box-shadow: 3px 3px 5px 6px rgb(158, 155, 155);
 }
 
-#photo {
-  display: flex;
-  flex-direction: column;
+#photo-container {
+  /* display: flex; */
+  position: relative;
+  /* flex-direction: column; */
   margin: 0px;
   padding: 0px;
 }
 
-#photo img {
+#photo-container img {
   width: auto;
   max-height: 300px;
   margin: 0;
   padding: 0%;
 }
+
+.gray-container {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: gray;
+  opacity: 0.8;
+  width: 100%;
+}
+
+#photo-title {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 10px;
+}
+
+#photo-description {
+  margin: 0 10px 10px;
+  font-size: 0.8em;
+  color: whitesmoke;
+}
+
 
 #leftArrow, #rightArrow {
   display: flex;
