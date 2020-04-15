@@ -18,7 +18,8 @@ h1 {
   justify-content: space-around;
   align-items: center;
   background-color: whitesmoke;
-  box-shadow: 3px 3px 5px 6px rgb(158, 155, 155);
+  /* box-shadow: 3px 3px 5px 6px rgb(158, 155, 155); */
+  box-shadow: 0 8px 6px -6px rgb(155,155,155);
 }
 
 #photo-container {
@@ -83,4 +84,24 @@ h1 {
 
 #rightArrow img:hover, #leftArrow img:hover {
   filter: opacity(50%)
+}
+
+.thumbs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 900px;
+  margin: 30px auto;
+}
+
+.thumbs img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 0 5px;
+    width: 100px;
+}
+
+.thumbs img:hover {
+  box-shadow: 0 0 3px 3px rgba(136, 134, 133, 0.5);
 }

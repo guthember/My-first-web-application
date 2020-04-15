@@ -39,7 +39,7 @@ $(function(){
   let $description = $('#photo-description');
   let $left = $('#leftArrow img');
   let $right = $('#rightArrow img');
-  
+  let $thumbs = $('.thumbs');
   // own variables
   let currentImage = 0;
   
@@ -49,7 +49,17 @@ $(function(){
     $description.text(imagesDatas[item].description);
   }
 
+  function setThumbs( photos ) {
+    let i = 0;
+    photos.forEach(photo => {
+      $thumbs.append(`<img src="${photo.photo}" data-number="${i}">`);
+      i++;
+    });
+  };
+
   setImage(currentImage);
+
+  setThumbs(imagesDatas);
 
   $left.click( function(){
     if( currentImage > 0) {
@@ -65,10 +75,9 @@ $(function(){
     }
   });
  
-
-  // $photo.attr('src', imagesDatas[1].photo);
-  // $title.text(imagesDatas[1].title);
-  // $description.text(imagesDatas[1].description);
-
+  $thumbs.on('click','img',function(){
+    let $which = $(this).attr('data-number')
+    setImage($which);
+  });
 
 });
