@@ -78,6 +78,7 @@ $(function(){
   $thumbs.on('click','img',function(){
     let $which = $(this).attr('data-number')
     setImage($which);
+    currentImage = $which;
   });
 
 });
