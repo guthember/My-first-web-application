@@ -31,9 +31,10 @@ h1 {
 
 #photo-container img {
   width: auto;
-  max-height: 300px;
+  max-height: 297px;
   margin: 0;
   padding: 0%;
+  bottom: 0;
 }
 
 .gray-container {
